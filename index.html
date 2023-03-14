@@ -1,7 +1,18 @@
 <!DOCTYPE html>
+<script type="module">
+    import LatLon from 'https://cdn.jsdelivr.net/npm/geodesy@2.4.0/latlon-ellipsoidal-vincenty.min.js';
+
+    const p1 = new LatLon(50.06632, -5.71475);
+    const p2 = new LatLon(58.64402, -3.07009);
+
+    const d = p1.distanceTo(p2);
+    console.assert(d.toFixed(3) == '968874.704');
+    console.dir(d)
+
+</script>
 <html>
 <body>
 <h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<p>LatLon loaded</p>
 </body>
 </html>
